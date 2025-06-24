@@ -1,0 +1,305 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #FFE1E0 0%, #F49BAB 35%, #9B7EBD 70%, #7F55B1 100%);
+    background-attachment: fixed;
+    padding-top: 100px;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(90deg, #7F55B1 0%, #9B7EBD 100%);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(127, 85, 177, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 30px;
+}
+
+.logo img {
+    height: 95px;
+    width: auto;
+    display: block;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #F49BAB;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.menu ul li a:hover {
+    background: #F49BAB;
+    color: #7F55B1;
+}
+
+.fon {
+    width: 80%;
+    height: 400px;
+    background: url('https://th.bing.com/th/id/OIP.NfZTfHO8lmOM3DtJz55HUQHaE8?rs=1&pid=ImgDetMain&cb=idpwebp2&o=7&rm=3');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    margin: 40px auto;
+    box-shadow: 0 4px 24px rgba(127, 85, 177, 0.15);
+    position: relative;
+}
+
+.fon-text {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #fff;
+    font-size: 2.1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    max-width: 380px;
+    z-index: 2;
+}
+
+.home {
+    scroll-margin-top: 200px;
+}
+
+.about {
+    width: 80%;
+    margin: 60px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 340px;
+    scroll-margin-top: 200px;
+}
+
+.about-content {
+    max-width: 380px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #222;
+}
+
+.about-content h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+}
+
+.about-content p {
+    font-size: 17px;
+    margin-bottom: 32px;
+    line-height: 1.3;
+}
+
+.about-btn {
+    background: #2959c0;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    padding: 14px 36px;
+    font-size: 18px;
+    font-family: inherit;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background 0.2s;
+}
+
+.about-btn:hover {
+    background: #8121f7;
+}
+
+.about-photo {
+    width: 380px;
+    height: 260px;
+    background: #dadada;
+    border-radius: 4px;
+    margin-left: -100px;
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+.questions {
+    width: 80%;
+    margin: 60px auto 0 auto;
+    /* background: rgba(255,255,255,0.7); */
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(127, 85, 177, 0.10);
+    padding: 36px 24px;
+}
+
+.questions-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.question-item {
+    margin-bottom: 18px;
+}
+
+.question-toggle {
+    width: 100%;
+    background: #4a306a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 18px 20px;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s;
+    outline: none;
+    box-shadow: 0 2px 8px rgba(127, 85, 177, 0.07);
+}
+
+.question-toggle:hover {
+    background: #9B7EBD;
+}
+
+.question-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: #F49BAB;
+    color: #232121;
+    border-radius: 0 0 8px 8px;
+    padding: 0 20px;
+    font-size: 17px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.4;
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.3s;
+}
+
+.question-item.active .question-answer {
+    padding: 18px 20px;
+    max-height: 300px;
+    transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), padding 0.3s;
+}
+
+.contacts {
+    width: 80%;
+    margin: 60px auto 40px auto;
+    background: rgba(255,255,255,0.85);
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(127, 85, 177, 0.10);
+    padding: 36px 24px 28px 24px;
+}
+
+.contacts-content {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacts-content h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+    color: #7F55B1;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+}
+
+.contacts-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.contacts-form input,
+.contacts-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid #9B7EBD;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    background: #fff;
+    color: #232121;
+    resize: none;
+    transition: border 0.2s;
+}
+
+.contacts-form input:focus,
+.contacts-form textarea:focus {
+    border: 1.5px solid #7F55B1;
+    outline: none;
+}
+
+.contacts-form button {
+    background: #2959c0;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    padding: 14px 36px;
+    font-size: 18px;
+    font-family: inherit;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background 0.2s;
+    align-self: flex-start;
+}
+
+.contacts-form button:hover {
+    background: #8121f7;
+}
+
+.contacts-info {
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    color: #232121;
+    font-size: 17px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contacts-info a {
+    color: #7F55B1;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contacts-info a:hover {
+    color: #2959c0;
+}
